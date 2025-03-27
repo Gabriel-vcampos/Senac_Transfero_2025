@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+            constructor(nome, idade , profissao){
+                this.nome = nome;
+                this.idade = idade;
+                this.profissao = profissao;
+            }
+            showperson(){
+                document.write("O nome da pessoa é: " , this.nome , " Com idade de: " , this.idade , " Com a profissão de: " , this.profissao);
+            }
+        }
+        let novaPessoa = new Pessoa ("Eduardo", "24 anos" , "Músico")
+        novaPessoa.showperson();
+    </script>
+    
+</body>
+</html>

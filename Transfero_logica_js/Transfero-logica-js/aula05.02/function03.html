@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    let resultado
+    let numero_1 = parseFloat(prompt("Escreva um número:"));
+    let numero_2 = parseFloat(prompt("Escreva outro número:"));
+    let operador = parseInt(prompt(("1- Adição\n 2- Subtração\n 3- Multiplicação\n 4- Divisão \n 5- Média")))
+    function resultadooperacoes (numero_1 , numero_2, operador){
+ 
+        switch(operador){
+        case 1:
+        resultado = numero_1 + numero_2
+        return resultado;
+        break;
+
+        case 2:
+        resultado = numero_1 - numero_2
+        return resultado;
+        break;
+
+        case 3:
+        resultado = numero_1 * numero_2
+        return resultado;
+        break;
+
+        case 4:
+        resultado = numero_1 / numero_2
+        return resultado;
+        break;
+
+        default:
+        return document.write("Valor inválido!")
+
+    }
+}
+    resultadooperacoes(numero_1 , numero_2 , operador);
+    document.write(resultado);
+    </script>
+</body>
+</html>

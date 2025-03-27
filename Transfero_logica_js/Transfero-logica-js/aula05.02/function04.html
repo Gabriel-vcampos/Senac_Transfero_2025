@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3 - Crie uma função chamada verificarIdade(idade), que recebe a idade de uma pessoa e retorna "Maior de idade" se for 18 anos ou mais, e "Menor de idade" caso contrário.
+        let idade = parseFloat(prompt("Olá, qual a sua idade?"));
+        function verificarIdade(idade){
+            if(idade < 18){
+                document.write("Você é menor de idade!")
+            } else {
+                document.write("Você é maior de idade!")
+            }
+        }
+        verificarIdade(idade);
+    </script>
+</body>
+</html>

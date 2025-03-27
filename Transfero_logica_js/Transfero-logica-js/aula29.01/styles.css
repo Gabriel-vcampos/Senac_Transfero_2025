@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(221, 189, 149);
+}
+nav{
+    background-color: black;
+    margin-top: -10px;;
+    margin-left: -10px;
+    margin-right: -20px;
+    height: 70px;
+}

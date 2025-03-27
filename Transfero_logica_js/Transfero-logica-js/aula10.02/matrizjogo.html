@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const oceanSize = 5;
+let ocean = [];
+for (let i = 0; i < oceanSize; i++) {
+    ocean[i] = [];
+    for (let j = 0; j < oceanSize; j++) {
+        ocean[i][j] = "~";  
+    }
+}
+
+let shipRow = 2
+let shipCol = 3; 
+
+function printOcean() {
+    console.log("Oceano:");
+    for (let i = 0; i < oceanSize; i++) {
+        console.log(ocean[i].join(" "));
+    }
+}
+
+// Função para o jogador tentar acertar o navio
+function takeShot(row, col) {
+    if (row === shipRow && col === shipCol) {
+        console.log("Você acertou! Navio afundado!");
+        ocean[row][col] = "X"; // Marca a posição do navio com "X"
+        printOcean();
+    } else {
+        console.log("Você errou! Tente novamente.");
+        ocean[row][col] = "O"; // Marca a posição onde o jogador errou com "O"
+        printOcean();
+    }
+}
+
+// Função de entrada do jogador
+function playGame() {
+    // Exibe o oceano
+    printOcean();
+
+    // Solicita a linha e a coluna ao jogador
+    let row = prompt("Digite a linha (0 a 4): ");
+    let col = prompt("Digite a coluna (0 a 4): ");
+
+    // Converte para números inteiros
+    row = parseInt(row);
+    col = parseInt(col);
+
+    // Verifica se a posição é válida
+    if (row >= 0 && row < oceanSize && col >= 0 && col < oceanSize) {
+        takeShot(row, col);
+    } else {
+        console.log("Coordenada inválida! Tente novamente.");
+    }
+}
+
+playGame();
+
+
+
+        </script>
+        
+</body>
+</html>

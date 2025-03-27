@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1) Dado um sistema que armazena notas de alunos em uma matriz 3x3
+        , realize as seguintes atividades:a) Criar uma matriz 3x3 preenchida com valores numéricos representando as notas dos alunos.*/
+
+        let matriz = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+];
+
+for (let m = 0; m < matriz.length; m++) {
+    for (let n = 0; n < matriz[m].length; n++) {
+        let resposta = parseFloat(prompt("Digite a nota do aluno para a posição (" + m + "," + n + "):"));
+        matriz[m][n] = resposta; // Atualiza o valor na matriz
+    }
+}
+
+// Exibe a matriz após a entrada de dados
+document.write("Matriz preenchida: <br>");
+for (let m = 0; m < matriz.length; m++) {
+    for (let n = 0; n < matriz[m].length; n++) {
+        document.write(matriz[m][n] + " ");
+    }
+    document.write("<br>");
+}
+    </script>
+</body>
+</html>

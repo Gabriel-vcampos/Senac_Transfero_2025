@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        new class Pessoa{
+            constructor(nome, email, telefone){
+            nome = this.nome; // definição dos atributos
+            telefone = this.telefone;
+            email = this.email;
+            }
+
+        userdigite(){
+            document.write("O usuário " + this.nome + "está digitando. . .");
+        }
+        userdelete(){
+            document.write("O usuário "+ this.nome + "está apagando. . .")
+        }
+    }
+
+        // criando um objeto a partir da classe pessoa
+        let novaPessoa =  Pessoa("Flavindopneu", "4002-8922" , "flavindopneu@gmail.com")
+        novaPessoa.userdigite();
+
+    </script>
+</body>
+</html>

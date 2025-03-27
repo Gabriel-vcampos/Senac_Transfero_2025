@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Produto{
+            constructor(nome , preco, quantidade){
+                this.nome = nome;
+                this.preco = preco;
+                this.quantidade = quantidade;
+            }
+            showproduto(){
+                document.write("------------------------------ <br>");
+                document.write("\nProduto: " , this.nome , "<br>");
+                document.write("------------------------------<br>");
+                document.write("\nPreço do produto: " , this.preco , "<br>");
+                document.write("------------------------------<br>");
+                document.write("\nQuantidade do produto: " , this.quantidade , "<br>");
+                document.write("------------------------------<br>");
+            }
+        }
+        let novoproduto = new Produto("Leite" , "R$ 10,00" , "3");
+        novoproduto.showproduto();
+    </script>
+</body>
+</html>

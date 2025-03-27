@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // função math.floor()
+// arrendonda um número para baixo. 
+document.write("numero arrondados: \n")
+document.write(Math.floor(4.9))
+document.write(Math.floor(2.3))
+// função math.random()
+
+
+// entre 0 e 1, onde 0 incluso e 1 excluso
+
+document.write("numero aleatorio: \n")
+document.write(Math.random()* 4)
+
+document.write(Math.floor(Math.random()* 6)+1)  //exemplo de como um dado funciona entre 1 e 6
+// entre 1 e 6
+document.write(Math.floor(Math.random() * 6) + 1);
+
+// função Math.ceil() arredonda para cima
+document.write("*** Números com ceil  \n***")
+document.write(Math.ceil(3.2)) //4
+let preco = 10.25;
+document.write(Math.ceil(preco)); // 11
+
+//função math.round() arredondamento normal
+document.write("*** Números com round ***")
+document.write(Math.round(4.4));
+document.write(Math.round(4.7));
+
+let media = 7.6;
+document.write(Math.round(media));
+
+// função Math.max() e Math.min()
+document.write("*** Números max e min ***")
+document.write(Math.max(10, 20, 5, 30));
+document.write(Math.min(10, 20, 5, 30));
+
+//função Math.pow() = potência
+// função Math.pow() = potencia
+console.log(Math.pow(2,3))
+let lado = 4 
+let area = Math.pow(lado,2)
+console.log("Área do quadrado: "+ area)
+
+
+// função Math.sqrt() = Raíz quadrada
+
+console.log("Função sqrt")
+console.log(Math.sqrt(25))
+console.log(Math.sqrt(9))
+
+    </script>
+</body>
+</html>
