@@ -3,14 +3,15 @@
 {% block main %}
     <main>
     <section class="container mt-5 mb-5">
-        <form name="teste" method="post" action="{% url 'gravar' %}">
+        <form method="post" action="{% if pessoa.id_pessoa %}{% url 'atualizar' pessoa.id_pessoa %}{% else %}{% url 'gravar' %}{% endif %}">
+        {% comment %} <form name="teste" method="post" action="{% url 'gravar' %}"> {% endcomment %}
             {% csrf_token %}
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" name="nome" id="nome" class="form-control" required>
+            <input type="text" name="nome" id="nome" class="form-control" required value = {{pessoa.nome}}>
             <label for="movel" class="form-label">Telefone</label>
-            <input type="tel" name="movel" id="movel" maxlength="11" class="form-control">
+            <input type="tel" name="movel" id="movel" maxlength="11" class="form-control value = {{pessoa.telefone}}">
             <label for="correio" class="form-label">Email</label>
-            <input type="email" name="correio" id="correio" class="form-control" required>
+            <input type="email" name="correio" id="correio" class="form-control" required value ={{pessoa.email}}>
             <hr> 
             <input type="submit" class="btn btn-outline-success" value="Enviar">  
             <input type="reset"  class="btn btn-outline-danger" value="Limpar">
@@ -26,13 +27,17 @@
                 <td>telefone</td>
                 <td>email</td>
             </tr>
-            {% for pessoa in pessoas %}
+            {% for pessoa in pessoasb7 %}
 
             <tr>
                 <td>{{pessoa.id_pessoa}}</td>
                 <td>{{pessoa.nome}}</td>
                 <td>{{pessoa.telefone}}</td>
                 <td>{{pessoa.email}}</td>
+                <td>
+                    <a href="{% url 'editar' pessoa.id_pessoa %}">Editar</a>
+                    <a href="{% url 'apagar' pessoa.id_pessoa %}">Apagar</a>
+                </td>
             </tr>
             {% endfor %}
         </table>
